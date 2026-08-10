@@ -15,6 +15,8 @@ export async function POST(req: NextRequest) {
     const modelMessages = await convertToModelMessages(messages);
 
     const result = streamText({
+      system:
+        "You are a helpful assistant. Respond to the user in Markdown format if required or whenever necessary.",
       model: groq("llama-3.1-8b-instant"),
       messages: modelMessages,
     });
