@@ -54,4 +54,4 @@ const { object, submit, isLoading, stop } = useObject({
 
 ## Note : useObject does not preserve context or history unlike `useChat`
 
-## And currently only getting on e shot responses not streamed responses.
+## For streaming responses the code works with gemini model not groq's model
