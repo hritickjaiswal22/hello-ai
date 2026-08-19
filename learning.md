@@ -55,3 +55,5 @@ const { object, submit, isLoading, stop } = useObject({
 ## Note : useObject does not preserve context or history unlike `useChat`
 
 ## For streaming responses the code works with gemini model not groq's model
+
+![alt text](./assets/Streamed%20Structured%20Output%20Response.png)
