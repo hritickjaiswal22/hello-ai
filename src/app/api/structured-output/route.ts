@@ -2,6 +2,7 @@ import { NextRequest } from "next/server";
 import { streamText, Output, createTextStreamResponse, toTextStream } from "ai";
 import { z } from "zod";
 import { groq } from "@ai-sdk/groq";
+import { google } from "@ai-sdk/google";
 
 export const heroesSchema = Output.array({
   element: z.object({
@@ -14,7 +15,7 @@ export const heroesSchema = Output.array({
 export async function POST(request: NextRequest) {
   try {
     const result = streamText({
-      model: groq("openai/gpt-oss-20b"),
+      model: google("gemini-3.6-flash"),
       output: heroesSchema,
       prompt: "Generate 10 hero descriptions for a fantasy role playing game.",
     });
