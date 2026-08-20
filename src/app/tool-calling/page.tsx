@@ -54,6 +54,16 @@ function ToolCalling() {
                     );
                   else return null;
                   break;
+
+                case "tool-getCityTime":
+                  if (part.state === "output-available")
+                    return (
+                      <h1
+                        key={part.toolCallId}
+                      >{`Current time in ${part.output.city} is ${new Date(part.output.datetime).toLocaleTimeString()}`}</h1>
+                    );
+                  else return null;
+                  break;
               }
             })}
           </div>

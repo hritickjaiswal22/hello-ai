@@ -20,6 +20,7 @@ export const POST = async (request: NextRequest) => {
       model: groq("openai/gpt-oss-20b"),
       messages,
       tools: chatTools,
+      toolChoice: "auto",
     });
 
     return createUIMessageStreamResponse({
