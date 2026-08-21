@@ -24,3 +24,25 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.user-content {
+  background-color: #f5f5f5;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  color: var(--Labels-Primary);
+  letter-spacing: 0;
+  border-radius: 12px;
+  flex-wrap: wrap;
+  gap: 4px;
+  max-width: 100%;
+  padding: 10px 12px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  display: inline-flex;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
